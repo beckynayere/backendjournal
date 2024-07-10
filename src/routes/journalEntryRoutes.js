@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const JournalEntryController_1 = require("../controllers/JournalEntryController");
+const checkJwt_1 = require("../middlewares/checkJwt");
+const router = (0, express_1.Router)();
+router.post("/", [checkJwt_1.checkJwt], JournalEntryController_1.JournalEntryController.createEntry);
+router.get("/", [checkJwt_1.checkJwt], JournalEntryController_1.JournalEntryController.getEntries);
+router.put("/:id", [checkJwt_1.checkJwt], JournalEntryController_1.JournalEntryController.updateEntry);
+router.delete("/:id", [checkJwt_1.checkJwt], JournalEntryController_1.JournalEntryController.deleteEntry);
+exports.default = router;
