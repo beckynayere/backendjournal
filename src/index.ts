@@ -4,7 +4,7 @@ import cors from 'cors';
 import sequelize from './models';
 import authRoutes from './routes/authRoutes';
 import userRoutes from './routes/userRoutes';
-import journalRoutes from './routes/journalRoutes';
+import journalRoutes from './routes/journalEntryRoutes';
 import dotenv from 'dotenv';
 
 dotenv.config();
