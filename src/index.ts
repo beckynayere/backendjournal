@@ -3,7 +3,9 @@ import { createConnection } from "typeorm";
 import express from "express";
 import bodyParser from "body-parser";
 import userRoutes from "./routes/userRoutes";
-import journalEntryRoutes from "./routes/journalEntryRoutes";
+import journalEntryRoutes from './routes/JournalEntryRoutes';
+
+
 
 createConnection().then(() => {
   const app = express();
