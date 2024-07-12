@@ -1,6 +1,4 @@
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, BaseEntity } from "typeorm";
-import "reflect-metadata";
-
 import { User } from "./User";
 
 @Entity()
