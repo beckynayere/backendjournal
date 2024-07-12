@@ -7,15 +7,15 @@ export class User extends BaseEntity {
   @PrimaryGeneratedColumn()
   id!: number;  
 
-  @Column()
+  @Column({ default: "" })
   @Length(4, 20)
   username: string = '';
 
-  @Column()
+  @Column({ default: "" })
   @IsEmail()
   email: string = '';
 
-  @Column()
+  @Column({ default: "" })
   @Length(8, 100)
   password: string = '';
 

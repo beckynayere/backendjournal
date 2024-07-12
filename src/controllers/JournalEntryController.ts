@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import { JournalEntry } from "../entities/JournalEntry";
 import { User } from "../entities/User";
+import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
 export class JournalEntryController {
   static createEntry = async (req: Request, res: Response) => {

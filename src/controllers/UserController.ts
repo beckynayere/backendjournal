@@ -24,7 +24,7 @@ export class UserController {
     if (!isValid) {
       return res.status(401).send("Invalid password");
     }
-    const token = jwt.sign({ userId: user.id }, "your_jwt_secret", {
+    const token = jwt.sign({ userId: user.id }, "jwt_secret", {
       expiresIn: "1h",
     });
     res.send({ token });

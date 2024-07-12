@@ -1,0 +1,11 @@
+{
+  "type": "postgres",
+  "host": "localhost",
+  "port": 5432,
+  "username": "nayere",
+  "password": "'NAYERS12",
+  "database": "myjournalback",
+  "synchronize": true,
+  "logging": false,
+  "entities": ["src/entities/**/*.ts"]
+}

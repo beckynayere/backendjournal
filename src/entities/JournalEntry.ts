@@ -4,20 +4,20 @@ import { User } from "./User";
 @Entity()
 export class JournalEntry extends BaseEntity {
   @PrimaryGeneratedColumn()
-  id!: number;  
+  id!: number;
 
-  @Column()
-  title: string = '';
+  @Column({ default: "" })
+  title!: string;
 
   @Column("text")
-  content: string = '';
+  content!: string;
 
   @Column()
-  category: string = '';
+  category!: string;
 
   @Column()
-  date: Date = new Date();
+  date!: Date;
 
   @ManyToOne(() => User, (user) => user.entries)
-  user!: User; 
+  user!: User;
 }
