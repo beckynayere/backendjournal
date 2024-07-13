@@ -1,9 +1,11 @@
 import { Router } from "express";
 import { JournalEntryController } from "../controllers/JournalEntryController";
 import { checkJwt } from '../middlewares/checkJwt';
-
+import JournalEntry from '../models/journalEntry';
 
 const router = Router();
+
+const journalEntry = new JournalEntry();
 
 router.post("/", [checkJwt], JournalEntryController.createEntry);
 router.get("/", [checkJwt], JournalEntryController.getEntries);

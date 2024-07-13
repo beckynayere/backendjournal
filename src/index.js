@@ -18,3 +18,7 @@ const journalEntryRoutes_1 = __importDefault(require("./routes/journalEntryRoute
         console.log("Server started on port 3000!");
     });
 }).catch(error => console.log(error));
+
+
+
+
