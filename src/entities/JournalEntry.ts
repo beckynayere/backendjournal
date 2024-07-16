@@ -6,7 +6,7 @@ export class JournalEntry extends BaseEntity {
   @PrimaryGeneratedColumn()
   id!: number;
 
-  @Column({ default: "" })
+  @Column( 'text' )
   title!: string;
 
   @Column("text")
